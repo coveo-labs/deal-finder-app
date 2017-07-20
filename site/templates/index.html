@@ -1,0 +1,22 @@
+{% extends "skeleton.html" %}
+{% set active_page = "index" %}
+{% block body %}
+<div class="jumbotron">
+	<h1>Deal finder</h1>
+	<p class="lead"></p>
+	<p><a class="btn btn-lg btn-success" href="/nearme" role="button">Find deals near me</a>
+	</p>
+</div>
+
+<div class="row marketing">
+	<div class="col-lg-6">
+		<h4>What is deal finder?</h4>
+		<p>Find deals near you with a single click of a button.</p>
+	</div>
+
+	<div class="col-lg-6">
+		<h4>How does it work?</h4>
+		<p>The deal finder is powered by the Coveo search engine.</p>
+	</div>
+</div>
+{% endblock %}

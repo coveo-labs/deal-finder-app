@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+	<script src="/js/CoveoJsSearch.min.js"></script>
+	<script src="https://static.cloud.coveo.com/searchui/v1.2537/js/templates/templatesNew.js"></script>
+	<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v1.2537/css/CoveoFullSearchNewDesign.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js" integrity="sha256-3nkG8q6ajh1K1fHC3hi142DykXlM5TA2xX3OzP/NNJM=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css" integrity="sha256-qxOBz0Std9dtkon+cnUi5A7HTHO0CLbp9DnkxsJuIXc=" crossorigin="anonymous" />
+	<title>Python Flask Bucket List App</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" id="index"><a href="/">Home</a>
+					</li>
+					<li role="presentation" id="near"><a href="/nearme">Nearby Deals</a>
+					</li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">Python Flask App</h3>
+		</div>
+
+		{% block body %}{% endblock %}
+
+		<footer class="footer">
+			<p>&copy; <a href="https://github.com/coveo-labs" target="_blank">Coveo Labs</a></p>
+		</footer>
+
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$("#{{active_page}}").addClass("active");
+		});
+	</script>
+
+</body>
+
+</html>
