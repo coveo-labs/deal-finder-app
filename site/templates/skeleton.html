@@ -12,8 +12,10 @@
 	<script src="/js/CoveoJsSearch.min.js"></script>
 	<script src="https://static.cloud.coveo.com/searchui/v1.2537/js/templates/templatesNew.js"></script>
 	<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v1.2537/css/CoveoFullSearchNewDesign.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js" integrity="sha256-3nkG8q6ajh1K1fHC3hi142DykXlM5TA2xX3OzP/NNJM=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css" integrity="sha256-qxOBz0Std9dtkon+cnUi5A7HTHO0CLbp9DnkxsJuIXc=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js" integrity="sha256-3nkG8q6ajh1K1fHC3hi142DykXlM5TA2xX3OzP/NNJM="
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css"
+	 integrity="sha256-qxOBz0Std9dtkon+cnUi5A7HTHO0CLbp9DnkxsJuIXc=" crossorigin="anonymous" />
 	<title>Python Flask Bucket List App</title>
 </head>
 
@@ -31,6 +33,11 @@
 			</nav>
 			<h3 class="text-muted">Python Flask App</h3>
 		</div>
+
+		<script>
+			window.key = `{{api_key}}`
+			window.url = `{{api_url}}`
+		</script>
 
 		{% block body %}{% endblock %}
 

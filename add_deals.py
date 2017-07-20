@@ -4,20 +4,23 @@ import json
 import time
 import zlib
 import base64
+import yaml
+
+config = yaml.safe_load(open('config.yml'))
 
 
 def sendFile(fileName, docId, data):
-	sourceId = "vrlzwbfdbi5fvglq2tnvnpkame-myorgsarecursed"
-	orgId = "myorgsarecursed"
-	documentId = docId
-	apiKey = "xx40138505-8942-4709-861e-349df23c0604"
+	source_id = config['source_id']
+	org_id = config['org_id']
+	document_id = docId
+	api_key = config['api_key']
 
 	url = "https://pushdev.cloud.coveo.com/v1/organizations/" + \
-		"{}/sources/{}/documents?documentId={}".format(orgId, sourceId, documentId)
+		"{}/sources/{}/documents?documentId={}".format(org_id, source_id, document_id)
 
 	headers = {
 		"Content-Type": "application/json",
-		"Authorization": "Bearer {}".format(apiKey)
+		"Authorization": "Bearer {}".format(api_key)
 	}
 
 	r = requests.put(url, data=json.dumps(data), headers=headers)

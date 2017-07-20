@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	let latitude = 0;
 
 	Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
-		restUri: 'https://platformdev.cloud.coveo.com/rest/search',
-		accessToken: 'xx34214be9-a475-49ab-af81-dcdd9d6912db'
+		restUri: window.url,
+		accessToken: window.key
 	});
 
 	Coveo.init(root, {
