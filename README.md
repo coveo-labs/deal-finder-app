@@ -1,10 +1,10 @@
 # deal-finder-app
 An app to find deals close to you using Coveo 
 
-# Description
+## Description
 This comes in 2 parts. The first one is the actual website, which is powered by Flask. The second part is adding the deals to a source, which comes in the form of `add_deals.py`. This is a demo of the capabilities of the Coveo Search engine.
 
-# Install
+## Install
 #### Coveo platform:
 This is for the deals
 1. Rename the `example-config.yml` to `config.yml`
@@ -16,10 +16,10 @@ This is for the deals
 	1. Add this permission `Search > Execute queries > Enable`
 7. Change the search url in `config.yml` to suite your platform
 
-# Dependencies
+## Dependencies
 1. `pip install pyyaml`
 2. `pip install requests`
 3. `pip install flask`
 
-# How to run
+## How to run
 After adding the deals to the source, simply start the flask app and head to `http://127.0.0.1:5000/`
