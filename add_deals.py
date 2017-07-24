@@ -14,9 +14,10 @@ def sendFile(fileName, docId, data):
 	org_id = config['org_id']
 	document_id = docId
 	api_key = config['api_key']
+	push_url = config['push_url']
 
-	url = "https://pushdev.cloud.coveo.com/v1/organizations/" + \
-		"{}/sources/{}/documents?documentId={}".format(org_id, source_id, document_id)
+	url = "https://{}/v1/organizations/" + \
+		"{}/sources/{}/documents?documentId={}".format(push_url, org_id, source_id, document_id)
 
 	headers = {
 		"Content-Type": "application/json",
